@@ -1,8 +1,8 @@
 <?php
 
 //require_once("/opt/lampp/htdocs/testowanie/src/Calculator.php");
-require_once("E:/xampp/htdocs/testowanieOprogramowania/src/Towar.php");
-require_once("E:/xampp/htdocs/testowanieOprogramowania/src/KoszykSklepowy.php");
+require_once("E:/xampp/htdocs/Dominiak_Dawid_testowanieOprogramowania/src/Towar.php");
+require_once("E:/xampp/htdocs/Dominiak_Dawid_testowanieOprogramowania/src/KoszykSklepowy.php");
 
 
 

@@ -4,7 +4,7 @@
 
 
 //require_once("/opt/lampp/htdocs/testowanie/src/UserStore.php");
-  require_once("E:/xampp/htdocs/testowanieOprogramowania/src/UserStore.php");
+  require_once("E:/xampp/htdocs/Dominiak_Dawid_testowanieOprogramowania/src/UserStore.php");
 
 class UserStoreTest extends PHPUnit_Framework_TestCase
 {
