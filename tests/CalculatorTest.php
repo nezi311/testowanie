@@ -1,5 +1,6 @@
 <?php
-require_once("/opt/lampp/htdocs/testowanie/src/Calculator.php");
+//require_once("/opt/lampp/htdocs/testowanie/src/Calculator.php");
+  require_once("E:/xampp/htdocs/testowanieOprogramowania/src/Calculator.php");
 //use PHPUnit\Framework\TestCase;
 
 class CalculatorTests extends PHPUnit_Framework_TestCase

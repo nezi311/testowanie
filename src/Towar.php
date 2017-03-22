@@ -7,6 +7,18 @@ class Towar
   private $towarVat;
   private $towarCena;
 
+/*
+
+  public function __construct($id,$nazwa,$vat,$cena)
+  {
+    $this-ustawId($id);
+    $this->ustawNazwa($nazwa);
+    $this->ustawCena($cena);
+    $this->ustawVat($vat);
+  }
+
+*/
+
 
   public function pobierzId()
   {
@@ -27,7 +39,13 @@ class Towar
 
   public function ustawId($id)
   {
-    $this->id=$id;
+    if($id>0)
+    {
+      $this->id=$id;
+      return true;
+    }
+      return false;
+
   }
   public function ustawNazwa($nazwa)
   {
@@ -35,11 +53,23 @@ class Towar
   }
   public function ustawCena($cena)
   {
-    $this->towarCena=$cena;
+    if($cena>0)
+    {
+      $this->towarCena=$cena;
+      return true;
+    }
+      return false;
+
   }
   public function ustawVat($vat)
   {
-    $this->towarVat=$vat;
+    if($vat>0)
+    {
+      $this->towarVat=$vat;
+      return true;
+    }
+      return false;
+
   }
 
 
