@@ -41,14 +41,14 @@ class KoszykSklepowy implements Iterator, Countable
       if(!$isInArray)
       {
         $this->towary[]=array('Towar'=>$towar, 'Ilosc'=>1);
-        $this->id[]=array($towar->pobierzId());
+        $this->ids[]=array($towar->pobierzId());
         return true;
       }
     }
     else
     {
       $this->towary[]=array('Towar'=>$towar, 'Ilosc'=>1);
-      $this->id[]=array($towar->pobierzId());
+      $this->ids[]=array($towar->pobierzId());
       return true;
     }
 
@@ -85,8 +85,8 @@ class KoszykSklepowy implements Iterator, Countable
   {
     if(!$this->czyPusty())
     {
-      $towary=array();
-      $ids=array();
+      $this->towary=array();
+      $this->ids=array();
       //$this->towary=new array();
       return true;
     }
