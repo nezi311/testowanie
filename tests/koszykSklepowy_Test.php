@@ -78,8 +78,28 @@ class koszykSklepowy_Test extends PHPUnit_Framework_TestCase
 
     $this->koszyk->dodajTowar($towar1);
     $this->koszyk->usunTowar($towar1);
-    $result = $this->koszyk->usunTowar($towar1);
-    $this->assertTrue(false==$result);
+    $this->koszyk->usunTowar($towar1);
+    $result =  $this->koszyk->liczTowatyWKoszyku();
+    $this->assertEquals(0,$result);
+  }
+
+  public function testUsun3()
+  {
+   $pendrive = new Towar();
+   $pendrive->ustawId(1);
+   $pendrive->ustawNazwa("Pendrive 8GB");
+   $pendrive->ustawCena(19.99);
+   $pendrive->ustawVat(23);
+   $pendrive2 = new Towar();
+   $pendrive2->ustawId(2);
+   $pendrive2->ustawNazwa("Pendrive 18GB");
+   $pendrive2->ustawCena(39.99);
+   $pendrive2->ustawVat(23);
+   $this->koszyk->dodajTowar($pendrive);
+   $this->koszyk->dodajTowar($pendrive2);
+   $this->koszyk->usunTowar($pendrive);
+   $result = $this->koszyk->liczTowatyWKoszyku();
+   $this->assertEquals(1,$result);
   }
 
   public function testDodajx2()

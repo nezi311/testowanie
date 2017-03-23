@@ -61,20 +61,30 @@ class KoszykSklepowy implements Iterator, Countable
     if(!$this->czyPusty())
     {
       $i=0;
-      foreach($this->towary as &$key)
+      foreach($this->towary as $key)
       {
         if(in_array($towar, $key, true))
         {
           unset($this->towary[$i]);
+          array_values($this->towary);
         }
         $i++;
       }
+
 
       if(($key = array_search($towar, $this->ids)) !== false)
       {
         unset($this->ids[$key]);
         return true;
       }
+      /*
+      foreach($this->towary as $key)
+      {
+        echo($key['Towar']->pobierzNazwa());
+        echo("  ilosc   ".$key['Ilosc']);
+        echo("<br>");
+      }
+      */
     }
 
     return false;
